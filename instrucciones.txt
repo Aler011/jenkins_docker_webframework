@@ -1,0 +1,17 @@
+docker build -t ubuntu_flask . //crear la imagen de Docker
+
+docker run -p 5001:5000 flask_ubuntu //ejecutar el contrenedor
+
+docker run -d --name contenedor_uf -p 5001:5000 ubuntu_flask
+
+//ejemplos
+//docker run -d --name contenedor_1 -p 5001:5000 flask_ubuntu
+//docker run -d --name contenedor_2 -p 5002:5000 flask_ubuntu
+//docker run -d --name contenedor_3 -p 5003:5000 flask_ubuntu
+
+docker ps //listar contenedores activos
+
+docker stop flask_ubuntu  //detener contenedor docker stop <CONTAINER_ID o NAMES>
+
+docker rm flask_ubuntu //eliminar contenedor de Docker
+docker rmi flask_ubuntu //eliminar imagen de docker
